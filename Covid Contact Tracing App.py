@@ -42,7 +42,10 @@ def openwindow2():
     Entry(window2, width = 15).place(x= 130, y= 120)
 
     # label, for sex
-    # entry, for gender
+    Label(window2, text = "Sex", font = ("verdana", 8, "bold")).place(x= 280, y= 85)
+    # entry, for sex
+    Entry(window2, width = 5).place(x= 280, y= 120)
+
     # entry, for phone number
     # entry, for address
     
