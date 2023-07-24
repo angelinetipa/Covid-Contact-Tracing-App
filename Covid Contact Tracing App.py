@@ -3,7 +3,7 @@ from tkinter import *
 window = Tk()
 # window title, geometry
 window.title("COVID-19 Contact Tracing App")
-window.geometry("500x600")
+window.geometry("490x250")
 window.resizable(False,False)
 
 # label, description for app
