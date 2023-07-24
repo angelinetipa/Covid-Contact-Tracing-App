@@ -12,6 +12,10 @@ Label(window, text = "This form will help track down people who are being diagno
 Label(window, text = "experiencing symptoms. This can lead to timely detection and treatment, as well as").place(x= 15, y= 50)
 Label(window, text = "preventing it from spreading further.").place(x= 15, y= 70)
 
+# def openwindow1
+def openwindow2():
+    window2 = Toplevel()
+    
 # button, to add information
 bttn1 = Button(window, text= "Add Information", font = ("verdana", 12)).place(x= 170, y= 100)
     # label for contact details
