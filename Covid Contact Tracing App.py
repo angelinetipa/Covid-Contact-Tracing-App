@@ -26,8 +26,10 @@
     # label for emergency contact
     # entry, for emergency contact information
     # button, to submit
+        # if submitted, append into file
 
 # button, to search entries
     # entry to search names
-        # if the name in data
-            # display that its already submitted
+        # for all info in files
+            # if the name in data
+                # display that its already submitted
