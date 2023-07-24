@@ -13,7 +13,7 @@ Label(window, text = "experiencing symptoms. This can lead to timely detection a
 Label(window, text = "preventing it from spreading further.").place(x= 15, y= 70)
 
 # button, to add information
-
+bttn1 = Button(window, text= "Add Information", font = ("verdana", 12)).place(x= 170, y= 100)
     # label for contact details
     # entry, for date of submission 
     # entry, for name
