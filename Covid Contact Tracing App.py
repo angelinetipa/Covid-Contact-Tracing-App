@@ -34,6 +34,10 @@ def openwindow2():
     Label(window2, text = "Date of Birth (MM/DD/YYYY)", font = ("verdana", 8, "bold")).place(x= 10, y= 85)
     # entry, for date of birth
     Entry(window2, width= 31).place(x= 10, y= 105)
+    # label, for date of submission
+    Label(window2, text = "Date of Submission (MM/DD/YYYY)", font = ("verdana", 8, "bold")).place(x= 250, y= 85)
+    # entry, for date of submission
+    Entry(window2, width= 37).place(x= 250, y= 105)
 
     # entry, for gender
     # entry, for phone number
