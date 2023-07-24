@@ -16,16 +16,19 @@ Label(window, text = "preventing it from spreading further.").place(x= 15, y= 70
 def openwindow2():
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
-    
-# button, to add information
-bttn1 = Button(window, text= "Add Information", font = ("verdana", 12)).place(x= 170, y= 100)
     # label for contact details
+    Label(window2, text = "Contact Details", font = ("verdana", 12, "bold", "italic")).place( x= 0, y= 5)
     # entry, for date of submission 
     # entry, for name
     # entry, for date of birth
     # entry, for gender
     # entry, for phone number
     # entry, for address
+    
+
+# button, to add information
+bttn1 = Button(window, text= "Add Information", font = ("verdana", 12), command= openwindow2).place(x= 170, y= 100)
+    
 
     # label for health details
     # checkbutton, for current situation
