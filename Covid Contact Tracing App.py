@@ -7,11 +7,15 @@ window.geometry("500x600")
 window.resizable(False,False)
 
 # label, description for app
-Label(window, text = "COVID-19 Contact Tracing Form", font = ("verdana", 12, "bold")).place(x=100, y=10)
+Label(window, text = "COVID-19 Contact Tracing Form", font = ("verdana", 12, "bold")).place( x= 110, y= 5)
+Label(window, text = "This form will help track down people who are being diagnosed with the virus or ").place(x= 45, y= 30)
+Label(window, text = "experiencing symptoms. This can lead to timely detection and treatment, as well as").place(x= 15, y= 50)
+Label(window, text = "preventing it from spreading further.").place(x= 15, y= 70)
+
 # button, to add information
 
     # label for contact details
-    # entry, for date of submission
+    # entry, for date of submission 
     # entry, for name
     # entry, for date of birth
     # entry, for gender
