@@ -20,7 +20,8 @@ def openwindow2():
     window2.resizable(False,False)
     # label for contact details
     Label(window2, text = "Contact Details", font = ("verdana", 12, "bold")).place(x= 5, y= 5)
-    # entry, for name
+
+    # label, for name
     Label(window2, text = "First Name", font = ("verdana", 8, "bold")).place(x= 10, y= 35)
     Label(window2, text = "Middle Name", font = ("verdana", 8, "bold")).place(x= 150, y= 35)
     Label(window2, text = "Last Name", font = ("verdana", 8, "bold")).place(x= 290, y= 35)
