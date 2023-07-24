@@ -1,5 +1,9 @@
 # import tkinter
+from tkinter import *
+window = Tk()
 # window title, geometry
+window.title("COVID-19 Contact Tracing Form")
+window.geometry("500x600")
 # label, description for app
 # button, to add information
 
@@ -33,3 +37,5 @@
         # for all info in files
             # if the name in data
                 # display that its already submitted
+
+window.mainloop()
