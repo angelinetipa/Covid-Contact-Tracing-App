@@ -30,7 +30,7 @@ def openwindow2():
     Entry(window2, width= 20).place(x= 150, y= 55)
     Entry(window2, width= 20).place(x= 290, y= 55)
 
-    # entry, for date of birth
+    # label, for date of birth
     Label(window2, text = "Date of Birth (MM/DD/YYYY)", font = ("verdana", 8, "bold")).place(x= 10, y= 85)
 
     # entry, for gender
