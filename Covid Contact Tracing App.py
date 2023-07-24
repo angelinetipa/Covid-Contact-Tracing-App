@@ -2,9 +2,10 @@
 from tkinter import *
 window = Tk()
 # window title, geometry
-window.title("COVID-19 Contact Tracing Form")
+window.title("COVID-19 Contact Tracing App")
 window.geometry("500x600")
 # label, description for app
+Label(window, text = "COVID-19 Contact Tracing Form", font = ("verdana", 12, "bold")).place(x=100, y=10)
 # button, to add information
 
     # label for contact details
