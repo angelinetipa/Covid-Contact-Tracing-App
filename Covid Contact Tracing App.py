@@ -23,12 +23,12 @@ def openwindow2():
 
     # label, for name
     Label(window2, text = "First Name", font = ("verdana", 8, "bold")).place(x= 10, y= 35)
-    Label(window2, text = "Middle Name", font = ("verdana", 8, "bold")).place(x= 150, y= 35)
-    Label(window2, text = "Last Name", font = ("verdana", 8, "bold")).place(x= 290, y= 35)
+    Label(window2, text = "Middle Name", font = ("verdana", 8, "bold")).place(x= 170, y= 35)
+    Label(window2, text = "Last Name", font = ("verdana", 8, "bold")).place(x= 330, y= 35)
     # entry, for name
-    Entry(window2, width= 20).place(x= 10, y= 55)
-    Entry(window2, width= 20).place(x= 150, y= 55)
-    Entry(window2, width= 20).place(x= 290, y= 55)
+    Entry(window2, width= 23).place(x= 10, y= 55)
+    Entry(window2, width= 23).place(x= 170, y= 55)
+    Entry(window2, width= 23).place(x= 330, y= 55)
 
     # label, for date of birth
     Label(window2, text = "Date of Birth (MM/DD/YYYY)", font = ("verdana", 8, "bold")).place(x= 10, y= 85)
