@@ -54,8 +54,10 @@ def openwindow2():
     # entry, for phone number
     Entry(window2, width = 17).place(x= 350, y= 120)
 
-    # entry, for address
-    
+    # label, for address
+    Label(window2, text = "Address", font = ("verdana", 8, "bold")).place(x= 10, y= 150)
+    Entry(window2, width = 77).place(x= 10, y= 170)
+
 
 # button, to add information
 bttn1 = Button(window, text= "Add Information", font = ("verdana", 12), command= openwindow2).place(x= 170, y= 100)
