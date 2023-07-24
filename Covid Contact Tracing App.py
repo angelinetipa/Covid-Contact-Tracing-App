@@ -26,19 +26,22 @@ def openwindow2():
     Label(window2, text = "Middle Name", font = ("verdana", 8, "bold")).place(x= 170, y= 35)
     Label(window2, text = "Last Name", font = ("verdana", 8, "bold")).place(x= 330, y= 35)
     # entry, for name
-    Entry(window2, width= 23).place(x= 10, y= 55)
-    Entry(window2, width= 23).place(x= 170, y= 55)
-    Entry(window2, width= 23).place(x= 330, y= 55)
+    Entry(window2, width = 23).place(x= 10, y= 55)
+    Entry(window2, width = 23).place(x= 170, y= 55)
+    Entry(window2, width = 23).place(x= 330, y= 55)
 
     # label, for date of birth
-    Label(window2, text = "Date of Birth (MM/DD/YYYY)", font = ("verdana", 8, "bold")).place(x= 10, y= 85)
+    Label(window2, text = "Date of Birth", font = ("verdana", 8, "bold")).place(x= 10, y= 85)
+    Label(window2, text = "(MM/DD/YYYY)", font = ("verdana", 7)).place(x= 10, y= 100)
     # entry, for date of birth
-    Entry(window2, width= 31).place(x= 10, y= 105)
+    Entry(window2, width = 15).place(x= 10, y= 120)
     # label, for date of submission
-    Label(window2, text = "Date of Submission (MM/DD/YYYY)", font = ("verdana", 8, "bold")).place(x= 250, y= 85)
+    Label(window2, text = "Date of Submission ", font = ("verdana", 8, "bold")).place(x= 130, y= 85)
+    Label(window2, text = "(MM/DD/YYYY)", font = ("verdana", 7)).place(x= 130, y= 100)
     # entry, for date of submission
-    Entry(window2, width= 37).place(x= 250, y= 105)
+    Entry(window2, width = 15).place(x= 130, y= 120)
 
+    # label, for sex
     # entry, for gender
     # entry, for phone number
     # entry, for address
