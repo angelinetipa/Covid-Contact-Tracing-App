@@ -21,8 +21,14 @@ def openwindow2():
     # label for contact details
     Label(window2, text = "Contact Details", font = ("verdana", 12, "bold")).place(x= 5, y= 5)
     # entry, for name
-    Label(window2, text = "Name", font = ("verdana", 8, "bold")).place(x= 5, y= 35)
-    
+    Label(window2, text = "First Name", font = ("verdana", 8, "bold")).place(x= 10, y= 35)
+    Label(window2, text = "Middle Name", font = ("verdana", 8, "bold")).place(x= 150, y= 35)
+    Label(window2, text = "Last Name", font = ("verdana", 8, "bold")).place(x= 290, y= 35)
+
+    Entry(window2, width= 20).place(x= 10, y= 55)
+    Entry(window2, width= 20).place(x= 150, y= 55)
+    Entry(window2, width= 20).place(x= 290, y= 55)
+
 
     # entry, for date of birth
     # entry, for gender
