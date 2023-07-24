@@ -30,7 +30,6 @@ def openwindow2():
     Entry(window2, width = 23).place(x= 170, y= 55)
     Entry(window2, width = 23).place(x= 330, y= 55)
 
-
     # label, for date of birth
     Label(window2, text = "Date of Birth", font = ("verdana", 8, "bold")).place(x= 10, y= 85)
     Label(window2, text = "(MM/DD/YYYY)", font = ("verdana", 7)).place(x= 10, y= 100)
@@ -42,12 +41,10 @@ def openwindow2():
     # entry, for date of submission
     Entry(window2, width = 22).place(x= 130, y= 120)
 
-
     # label, for sex
     Label(window2, text = "Sex", font = ("verdana", 8, "bold")).place(x= 290, y= 85)
     # entry, for sex
     Entry(window2, width = 5).place(x= 290, y= 120)
-
 
     # label, for phone number
     Label(window2, text = "Phone Number", font = ("verdana", 8, "bold")).place(x= 350, y= 85)
@@ -58,12 +55,9 @@ def openwindow2():
     Label(window2, text = "Address", font = ("verdana", 8, "bold")).place(x= 10, y= 150)
     Entry(window2, width = 77).place(x= 10, y= 170)
 
-
-# button, to add information
-bttn1 = Button(window, text= "Add Information", font = ("verdana", 12), command= openwindow2).place(x= 170, y= 100)
-    
-
     # label for health details
+    Label(window2, text = "Contact Details", font = ("verdana", 12, "bold")).place(x= 5, y= 210)
+
     # checkbutton, for current situation
         # if diagnosed with Coronavirus
             # when it started
@@ -79,6 +73,11 @@ bttn1 = Button(window, text= "Add Information", font = ("verdana", 12), command=
     # entry, for emergency contact information
     # button, to submit
         # if submitted, append into file
+# button, to add information
+bttn1 = Button(window, text= "Add Information", font = ("verdana", 12), command= openwindow2).place(x= 170, y= 100)
+    
+
+
 
 # button, to search entries
     # entry to search names
