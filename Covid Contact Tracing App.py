@@ -41,20 +41,18 @@ def openwindow2():
     # entry, for date of submission
     Entry(window2, width = 22).place(x= 130, y= 120)
  
-    # label, for sex
-    Label(window2, text = "Sex", font = "verdana 8 bold").place(x= 290, y= 85)
-    # optionmenu, for sex
-    Lists = ["Male", "Female"]
-    Listsroom = StringVar(window2)
-    Listsroom.set("Select")
-    OptionMenu(window2, Listsroom, *Lists).place(x= 280, y= 120, width = 67)
-
-
-    # label, for phone number
-    Label(window2, text = "Phone Number", font = "verdana 8 bold").place(x= 350, y= 85)
+     # label, for phone number
+    Label(window2, text = "Phone Number", font = "verdana 8 bold").place(x= 290, y= 85)
     # entry, for phone number
-    Entry(window2, width = 17).place(x= 350, y= 120)
+    Entry(window2, width = 17).place(x= 280, y= 120)
 
+    # label, for sex
+    Label(window2, text = "Sex", font = "verdana 8 bold").place(x= 400, y= 85)
+    # radiobutton, for sex
+    Sex = StringVar()
+    Radiobutton(window2, text = "Male", variable = Sex, value = "Male").place(x= 400, y= 100)
+    Radiobutton(window2, text = "Female", variable = Sex, value = "Female").place(x= 400, y= 120)
+   
     # label, for address
     Label(window2, text = "Address", font = "verdana 8 bold").place(x= 10, y= 150)
     Entry(window2, width = 77).place(x= 10, y= 170)
