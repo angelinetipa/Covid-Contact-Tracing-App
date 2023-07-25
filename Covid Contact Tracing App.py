@@ -14,7 +14,7 @@ Label(window, text = "preventing it from spreading further.").place(x= 15, y= 70
 def openwindow2(): # function to open window 2
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
-    window2.geometry("490x600")
+    window2.geometry("490x640")
     window2.resizable(False,False)
     # label for contact details
     Label(window2, text = "Contact Details", font = "verdana 12 bold").place(x= 5, y= 5)
