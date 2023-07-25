@@ -1,0 +1,8 @@
+{
+    "editor.quickSuggestions": {
+        "comments": "on"
+    },
+    "editor.suggest.preview": true,
+    "editor.parameterHints.enabled": false,
+    "editor.parameterHints.cycle": false
+}
