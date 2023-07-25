@@ -101,7 +101,9 @@ def openwindow2(): # function to open window 2
     def addtofile(): # function to append information into file
         with open("COVID-19 cases.txt", "w") as infofile:
             infofile.write(f"Name: {FName} {MName} {LName}  Date of Birth: {DoBirth}  Phone: {Number}  Sex: {Sex.get()}  Address: {Address}  Date of Submission: {DoSubmission}")
-            
+        window2.destroy # after submitting window2 would destroy
+
+    def closewindow(): # function to close window
     # button, to submit
     bttn3 = Button(window2, text = "Submit", font = "verdana 10 bold").place(x=210, y= 600)
         # if submitted, append into file
