@@ -98,9 +98,14 @@ def openwindow2(): # function to open window 2
     Entry(window2, width = 23).place(x= 140, y= 535)
     Entry(window2, width = 23).place(x= 140, y= 555)
 
+    def addtofile(): # function to append information into file
+        with open("COVID-19 cases.txt", "w") as infofile:
+            infofile.write()
+            
     # button, to submit
-    bttn3 = Button(window2, text = "Submit", font = "verdana 8 bold").place(x=250, y= 620)
+    bttn3 = Button(window2, text = "Submit", font = "verdana 10 bold").place(x=210, y= 600)
         # if submitted, append into file
+
 # button, to add information
 bttn1 = Button(window, text= "Add Information", font = ("verdana", 12), command= openwindow2).place(x= 170, y= 100)
 
