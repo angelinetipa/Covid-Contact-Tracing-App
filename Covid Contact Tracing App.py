@@ -32,12 +32,12 @@ def openwindow2(): # function to open window 2
     Label(window2, text = "Date of Birth", font = "verdana 8 bold").place(x= 10, y= 85)
     Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 10, y= 100)
     # entry, for date of birth
-    Entry(window2, width = 15).place(x= 10, y= 120)
+    DoBirth = Entry(window2, width = 15).place(x= 10, y= 120)
     # label, for date of submission
     Label(window2, text = "Date of Submission ", font = "verdana 8 bold").place(x= 130, y= 85)
     Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 130, y= 100)
     # entry, for date of submission
-    Entry(window2, width = 22).place(x= 130, y= 120)
+    DoSubmission = Entry(window2, width = 22).place(x= 130, y= 120)
  
      # label, for phone number
     Label(window2, text = "Phone Number", font = "verdana 8 bold").place(x= 290, y= 85)
