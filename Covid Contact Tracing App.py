@@ -61,37 +61,34 @@ def openwindow2():
     Label(window2, text = "Health Details", font = "verdana 12 bold").place(x= 5, y= 220)
     Label(window2, text = "Select that applies to your situation:", font = "verdana 8 bold").place(x= 10, y= 250)
 
-    Health = StringVar()
-    # command if diagnosed with Coronavirus
-    def diagnosed():
-        # have you traveled to any places when you diagnosed with coronavirus
-        Label(window2, text = "Have you traveled to any places when you are", font = "verdana 8 bold").place(x= 125, y= 310)
-        Label(window2, text = "diagnosed with COVID-19?", font = "verdana 8 bold").place(x= 125, y= 325)
-        # if yes state the details of your travel
-        Label(window2, text = "If yes state the details of your travel. (Date, Places, etc.)", font = "verdana 7").place(x= 125, y= 340)
-        # entry, for date of submission
-        Text(window2, width = 43, height = 3).place(x= 125, y= 360)
-    # radiobutton, when diagnosed with COVID 19
-    Radiobutton(window2, text = "Diagnosed with COVID-19", variable = Health, value = "Male", command = diagnosed).place(x= 10, y= 265)
-    
-    # command if showing symptoms
-    def showing(): 
+    Health = StringVar() 
         
-       
-        # What conditions you currently have during this time? (Check all that apply)
-        Label(window2, text= "What conditions you currently have during this time?", font= "verdana 8 bold").place(x= 125, y= 360)
-        Checkbutton(window2, text= "Fever").place(x= 10)
-        # have you traveled to any places when you diagnosed with coronavirus
-        # if yes state the details of your travel
-   
-    Radiobutton(window2, text = "Showing COVID-19 symptoms", variable = Health, value = "Female", command = showing).place(x= 10, y= 285)
+    # radiobutton, when diagnosed with COVID 19
+    Radiobutton(window2, text = "Diagnosed with COVID-19", variable = Health, value = "Diagnosed").place(x= 10, y= 265)
+    # radiobutton, when showing symptoms of COVID 19
+    Radiobutton(window2, text = "Showing COVID-19 symptoms", variable = Health, value = "Showing").place(x= 10, y= 285)
         
     # when it started
     Label(window2, text = "Date of Onset", font = "verdana 8 bold").place(x= 300, y= 250)
     Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 300, y= 265)   
     # entry, for date of submission
     Entry(window2, width = 15).place(x= 300, y= 285)
-    
+
+    # Which of the following conditions you currently have during ths time?
+    Label(window2, text = "Which of the following conditions you", font = "verdana 8 bold").place(x= 10, y= 310)
+    Label(window2, text = "currently have during ths time?", font = "verdana 8 bold").place(x= 10, y= 325)
+    # chechbutton for conditions
+    Checkbutton(window2, text = "Fever").place(x= 10, y= 340)  
+    Checkbutton(window2, text = "Cough").place(x= 10, y= 360)  
+    Checkbutton(window2, text = "Breathing Difficulty").place(x= 10, y= 380)  
+
+    # have you traveled to any places when you diagnosed with coronavirus
+    Label(window2, text = "Have you traveled to any places when you are", font = "verdana 8 bold").place(x= 225, y= 310)
+    Label(window2, text = "diagnosed with COVID-19?", font = "verdana 8 bold").place(x= 225, y= 325)
+    # if yes state the details of your travel
+    Label(window2, text = "If yes state the details of your travel. (Date, Places, etc.)", font = "verdana 7").place(x= 225, y= 340)
+    # entry, for date of submission
+    Text(window2, width = 43, height = 3).place(x= 225, y= 360)
     # label for emergency contact
     # entry, for emergency contact information
     # button, to submit
