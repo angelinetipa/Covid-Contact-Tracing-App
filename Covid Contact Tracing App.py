@@ -73,9 +73,9 @@ def openwindow2():
         Label(window2, text = "Have you traveled to any places when you are", font = "verdana 8 bold").place(x= 125, y= 310)
         Label(window2, text = "diagnosed with COVID-19?", font = "verdana 8 bold").place(x= 125, y= 325)
         # if yes state the details of your travel
-        Label(window2, text = "If yes state the details of your travel.", font = "verdana 7").place(x= 125, y= 340)
+        Label(window2, text = "If yes state the details of your travel. (Date, Places, etc.)", font = "verdana 7").place(x= 125, y= 340)
         # entry, for date of submission
-        Text(window2, width = 43, height = 5).place(x= 125, y= 360)
+        Text(window2, width = 43, height = 3).place(x= 125, y= 360)
     # radiobutton, when diagnosed with COVID 19
     Radiobutton(window2, text = "Diagnosed with COVID-19", variable = Health, value = "Male", command = diagnosed).place(x= 10, y= 265)
     
