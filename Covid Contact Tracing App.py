@@ -68,12 +68,6 @@ def openwindow2():
     # radiobutton, when showing symptoms of COVID 19
     Radiobutton(window2, text = "Showing COVID-19 symptoms", variable = Health, value = "Showing").place(x= 10, y= 285)
         
-    # when it started
-    Label(window2, text = "Date of Onset", font = "verdana 8 bold").place(x= 300, y= 250)
-    Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 300, y= 265)   
-    # entry, for date of submission
-    Entry(window2, width = 15).place(x= 300, y= 285)
-
     # Which of the following conditions you currently have during ths time?
     Label(window2, text = "Which of the following conditions you", font = "verdana 8 bold").place(x= 10, y= 310)
     Label(window2, text = "currently have during ths time?", font = "verdana 8 bold").place(x= 10, y= 325)
@@ -81,6 +75,12 @@ def openwindow2():
     Checkbutton(window2, text = "Fever").place(x= 10, y= 340)  
     Checkbutton(window2, text = "Cough").place(x= 10, y= 360)  
     Checkbutton(window2, text = "Breathing Difficulty").place(x= 10, y= 380)  
+
+    # when it started
+    Label(window2, text = "Date of Onset", font = "verdana 8 bold").place(x= 10, y= 405)
+    Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 10, y= 420)   
+    # entry, for date of submission
+    Entry(window2, width = 15).place(x= 10, y= 440)
 
     # have you traveled to any places when you diagnosed with coronavirus
     Label(window2, text = "Have you traveled to any places when you are", font = "verdana 8 bold").place(x= 225, y= 310)
