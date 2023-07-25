@@ -80,8 +80,12 @@ def openwindow2():
     Radiobutton(window2, text = "Diagnosed with COVID-19", variable = Health, value = "Male", command = diagnosed).place(x= 10, y= 265)
     
     # command if showing symptoms
-    def showing():
+    def showing(): 
         # when it started
+        Label(window2, text = "Date of Onset", font = "verdana 8 bold").place(x= 10, y= 317)
+        Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 10, y= 340)
+        # entry, for date of submission
+        Entry(window2, width = 15).place(x= 10, y= 360)
         # What conditions you currently have during this time? (Check all that apply)
         # have you traveled to any places when you diagnosed with coronavirus
         # if yes state the details of your travel
