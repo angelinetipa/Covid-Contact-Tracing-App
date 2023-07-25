@@ -102,13 +102,19 @@ def openwindow2(): # function to open window 2
         # if submitted, append into file
 # button, to add information
 bttn1 = Button(window, text= "Add Information", font = ("verdana", 12), command= openwindow2).place(x= 170, y= 100)
-    
-# button, to search entries
-bttn2 = Button(window, text= "Search Information", font = ("verdana", 12), command= openwindow3).place(x= 170, y= 150)
 
-    # entry to search names
+def openwindow3(): # function to open window 3
+    window2 = Toplevel()
+    window2.title("COVID-19 Contact Tracing Form")
+    window2.geometry("490x600")
+    window2.resizable(False,False)
+     # entry to search names
         # for all info in files
             # if the name in data
                 # display that its already submitted
+# button, to search entries
+bttn2 = Button(window, text= "Search Information", font = ("verdana", 12), command= openwindow3).place(x= 170, y= 150)
+
+   
 
 window.mainloop() # Keep the window open
