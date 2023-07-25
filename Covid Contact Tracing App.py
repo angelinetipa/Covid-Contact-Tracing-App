@@ -40,11 +40,15 @@ def openwindow2():
     Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 130, y= 100)
     # entry, for date of submission
     Entry(window2, width = 22).place(x= 130, y= 120)
-
+ 
     # label, for sex
     Label(window2, text = "Sex", font = "verdana 8 bold").place(x= 290, y= 85)
-    # entry, for sex
-    Entry(window2, width = 5).place(x= 290, y= 120)
+    # optionmenu, for sex
+    Lists = ["Male", "Female"]
+    Listsroom = StringVar(window2)
+    Listsroom.set("Select")
+    OptionMenu(window2, Listsroom, *Lists).place(x= 280, y= 120, width = 67)
+
 
     # label, for phone number
     Label(window2, text = "Phone Number", font = "verdana 8 bold").place(x= 350, y= 85)
