@@ -1,10 +1,9 @@
 # import tkinter
 from tkinter import *
 window = Tk()
-# window title, geometry
-window.title("COVID-19 Contact Tracing App")
-window.geometry("490x250")
-window.resizable(False,False)
+window.title("COVID-19 Contact Tracing App") # window title
+window.geometry("490x250") # window geometry
+window.resizable(False,False) # window not resizable
 
 # label, description for app
 Label(window, text = "COVID-19 Contact Tracing Form", font = "verdana 12 bold").place(x= 110, y= 5)
@@ -12,8 +11,7 @@ Label(window, text = "This form will help track down people who are being diagno
 Label(window, text = "experiencing symptoms. This can lead to timely detection and treatment, as well as").place(x= 15, y= 50)
 Label(window, text = "preventing it from spreading further.").place(x= 15, y= 70)
 
-# def openwindow1
-def openwindow2():
+def openwindow2(): # function to open window 2
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
     window2.geometry("490x600")
@@ -114,4 +112,4 @@ bttn1 = Button(window, text= "Add Information", font = ("verdana", 12), command=
             # if the name in data
                 # display that its already submitted
 
-window.mainloop()
+window.mainloop() # Keep the window open
