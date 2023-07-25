@@ -69,26 +69,25 @@ def openwindow2():
     Radiobutton(window2, text = "Showing COVID-19 symptoms", variable = Health, value = "Showing").place(x= 10, y= 285)
         
     # Which of the following conditions you currently have during ths time?
-    Label(window2, text = "Which of the following conditions you", font = "verdana 8 bold").place(x= 10, y= 310)
-    Label(window2, text = "currently have during ths time?", font = "verdana 8 bold").place(x= 10, y= 325)
+    Label(window2, text = "Which of the following conditions you have during this time?", font = "verdana 8 bold").place(x= 10, y= 310)
     # chechbutton for conditions
-    Checkbutton(window2, text = "Fever").place(x= 10, y= 340)  
-    Checkbutton(window2, text = "Cough").place(x= 10, y= 360)  
-    Checkbutton(window2, text = "Breathing Difficulty").place(x= 10, y= 380)  
+    Checkbutton(window2, text = "Fever").place(x= 10, y= 325)  
+    Checkbutton(window2, text = "Cough").place(x= 80, y= 325)  
+    Checkbutton(window2, text = "Breathing Difficulty").place(x= 160, y= 325)  
+    Checkbutton(window2, text = "Loss of taste/smell").place(x= 305, y= 325)  
 
     # when it started
-    Label(window2, text = "Date of Onset", font = "verdana 8 bold").place(x= 10, y= 405)
-    Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 10, y= 420)   
+    Label(window2, text = "Date of Onset", font = "verdana 8 bold").place(x= 300, y= 250)
+    Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place (x= 300, y= 265)  
     # entry, for date of submission
-    Entry(window2, width = 15).place(x= 10, y= 440)
+    Entry(window2, width = 15).place(x= 300, y= 285)
 
     # have you traveled to any places when you diagnosed with coronavirus
-    Label(window2, text = "Have you traveled to any places when you are", font = "verdana 8 bold").place(x= 225, y= 310)
-    Label(window2, text = "diagnosed with COVID-19?", font = "verdana 8 bold").place(x= 225, y= 325)
+    Label(window2, text = "What places have you been when experiencing this symptom/s?", font = "verdana 8 bold").place(x= 10, y= 350)
     # if yes state the details of your travel
-    Label(window2, text = "If yes state the details of your travel. (Date, Places, etc.)", font = "verdana 7").place(x= 225, y= 340)
+    Label(window2, text = "State the details of your travel. (Date, Places, etc.)", font = "verdana 7").place(x= 10, y= 365)
     # entry, for date of submission
-    Text(window2, width = 43, height = 3).place(x= 225, y= 360)
+    Text(window2, width = 58, height = 3).place(x= 10, y= 385)
     # label for emergency contact
     # entry, for emergency contact information
     # button, to submit
