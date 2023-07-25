@@ -84,11 +84,18 @@ def openwindow2():
 
     # have you traveled to any places when you diagnosed with coronavirus
     Label(window2, text = "What places have you been when experiencing this symptom/s?", font = "verdana 8 bold").place(x= 10, y= 350)
-    # if yes state the details of your travel
     Label(window2, text = "State the details of your travel. (Date, Places, etc.)", font = "verdana 7").place(x= 10, y= 365)
     # entry, for date of submission
     Text(window2, width = 58, height = 3).place(x= 10, y= 385)
+    
     # label for emergency contact
+    Label(window2, text = "Emergency Contact Information", font = "verdana 12 bold").place(x= 5, y= 465)
+    Label(window2, text = "Name", font = "verdana 8 bold").place(x= 10, y= 485)
+    Label(window2, text = "Phone ", font = "verdana 8 bold").place(x= 10, y= 505)
+    Label(window2, text = "Address", font = "verdana 8 bold").place(x= 10, y= 525)
+    Label(window2, text = "Relationship", font = "verdana 8 bold").place(x= 10, y= 545)
+
+
     # entry, for emergency contact information
     # button, to submit
         # if submitted, append into file
