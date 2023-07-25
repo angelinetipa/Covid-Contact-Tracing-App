@@ -90,13 +90,16 @@ def openwindow2():
     
     # label for emergency contact
     Label(window2, text = "Emergency Contact Information", font = "verdana 12 bold").place(x= 5, y= 465)
-    Label(window2, text = "Name", font = "verdana 8 bold").place(x= 10, y= 485)
-    Label(window2, text = "Phone ", font = "verdana 8 bold").place(x= 10, y= 505)
-    Label(window2, text = "Address", font = "verdana 8 bold").place(x= 10, y= 525)
-    Label(window2, text = "Relationship", font = "verdana 8 bold").place(x= 10, y= 545)
-
-
+    Label(window2, text = "Name", font = "verdana 8 bold").place(x= 10, y= 495)
+    Label(window2, text = "Phone ", font = "verdana 8 bold").place(x= 10, y= 515)
+    Label(window2, text = "Address", font = "verdana 8 bold").place(x= 10, y= 535)
+    Label(window2, text = "Relationship", font = "verdana 8 bold").place(x= 10, y= 555)
     # entry, for emergency contact information
+    Entry(window2, width = 23).place(x= 140, y= 495)
+    Entry(window2, width = 23).place(x= 140, y= 515)
+    Entry(window2, width = 23).place(x= 140, y= 535)
+    Entry(window2, width = 23).place(x= 140, y= 555)
+
     # button, to submit
         # if submitted, append into file
 # button, to add information
