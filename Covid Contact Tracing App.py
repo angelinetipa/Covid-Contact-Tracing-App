@@ -80,13 +80,15 @@ def openwindow2():
     Radiobutton(window2, text = "Diagnosed with COVID-19", variable = Health, value = "Male", command = diagnosed).place(x= 10, y= 265)
     
     # command if showing symptoms
+    def showing():
+        # when it started
+        # What conditions you currently have during this time? (Check all that apply)
+        # have you traveled to any places when you diagnosed with coronavirus
+        # if yes state the details of your travel
+   
     Radiobutton(window2, text = "Showing COVID-19 symptoms", variable = Health, value = "Female").place(x= 10, y= 285)
         
-        # if showing coronavirus symptoms
-            # when it started
-            # What conditions you currently have during this time? (Check all that apply)
-            # have you traveled to any places when you diagnosed with coronavirus
-                # if yes state the details of your travel
+        
 
     # label for emergency contact
     # entry, for emergency contact information
