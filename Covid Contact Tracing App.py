@@ -42,7 +42,7 @@ def openwindow2(): # function to open window 2
      # label, for phone number
     Label(window2, text = "Phone Number", font = "verdana 8 bold").place(x= 290, y= 85)
     # entry, for phone number
-    Entry(window2, width = 17).place(x= 280, y= 120)
+    Number = Entry(window2, width = 17).place(x= 280, y= 120)
 
     # label, for sex
     Label(window2, text = "Sex", font = "verdana 8 bold").place(x= 400, y= 85)
@@ -53,7 +53,7 @@ def openwindow2(): # function to open window 2
    
     # label, for address
     Label(window2, text = "Address", font = "verdana 8 bold").place(x= 10, y= 150)
-    Entry(window2, width = 77).place(x= 10, y= 170)
+    Address = Entry(window2, width = 77).place(x= 10, y= 170)
 
     # label for health details
     Label(window2, text = "Health Details", font = "verdana 12 bold").place(x= 5, y= 220)
