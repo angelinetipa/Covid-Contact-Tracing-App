@@ -103,10 +103,9 @@ def openwindow2(): # function to open window 2
 # button, to add information
 bttn1 = Button(window, text= "Add Information", font = ("verdana", 12), command= openwindow2).place(x= 170, y= 100)
     
-
-
-
 # button, to search entries
+bttn2 = Button(window, text= "Search Information", font = ("verdana", 12), command= openwindow3).place(x= 170, y= 150)
+
     # entry to search names
         # for all info in files
             # if the name in data
