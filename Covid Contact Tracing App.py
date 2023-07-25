@@ -62,12 +62,23 @@ def openwindow2():
 
     # radiobutton, for current health
     Health = StringVar()
-    Radiobutton(window2, text = "Diagnosed with COVID-19", variable = Health, value = "Male").place(x= 10, y= 250)
+    # command if diagnosed with Coronavirus
+    def diagnosed():
+        # when it started
+        Label(window2, text = "Date of Onset", font = "verdana 8 bold").place(x= 10, y= 310)
+        Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 10, y= 340)
+        # entry, for date of submission
+        Entry(window2, width = 22).place(x= 10, y= 350)
+        # have you traveled to any places when you diagnosed with coronavirus
+        Label(window2, text = "Have you traveled to any places when you are diagnosed with coronavirus?", font = "verdana 8 bold").place(x= 10, y= 350)
+        # if yes state the details of your travel
+        Label(window2, text = "If yes state the details of your travel...", font = "verdana 7").place(x= 10, y= 360)
+        # entry, for date of submission
+        Entry(window2, width = 22).place(x= 10, y= 370)
+
+    Radiobutton(window2, text = "Diagnosed with COVID-19", variable = Health, value = "Male", command = diagnosed).place(x= 10, y= 250)
     Radiobutton(window2, text = "Showing COVID-19 symptoms", variable = Health, value = "Female").place(x= 10, y= 270)
-        # if diagnosed with Coronavirus
-            # when it started
-            # have you traveled to any places when you diagnosed with coronavirus
-                # if yes state the details of your travel
+        
         # if showing coronavirus symptoms
             # when it started
             # What conditions you currently have during this time? (Check all that apply)
