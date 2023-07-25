@@ -58,9 +58,12 @@ def openwindow2():
     Entry(window2, width = 77).place(x= 10, y= 170)
 
     # label for health details
-    Label(window2, text = "Health Details", font = "verdana 12 bold").place(x= 5, y= 210)
+    Label(window2, text = "Health Details", font = "verdana 12 bold").place(x= 5, y= 220)
 
-    # checkbutton, for current situation
+    # radiobutton, for current health
+    Health = StringVar()
+    Radiobutton(window2, text = "Diagnosed with COVID-19", variable = Health, value = "Male").place(x= 10, y= 250)
+    Radiobutton(window2, text = "Showing COVID-19 symptoms", variable = Health, value = "Female").place(x= 10, y= 270)
         # if diagnosed with Coronavirus
             # when it started
             # have you traveled to any places when you diagnosed with coronavirus
