@@ -78,6 +78,8 @@ def openwindow2():
         Entry(window2, width = 55).place(x= 125, y= 360)
     # radiobutton, when diagnosed with COVID 19
     Radiobutton(window2, text = "Diagnosed with COVID-19", variable = Health, value = "Male", command = diagnosed).place(x= 10, y= 265)
+    
+    # command if showing symptoms
     Radiobutton(window2, text = "Showing COVID-19 symptoms", variable = Health, value = "Female").place(x= 10, y= 285)
         
         # if showing coronavirus symptoms
