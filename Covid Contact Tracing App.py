@@ -11,7 +11,7 @@ window.configure(bg="dark red")
 Label(window, text = "COVID-19 Contact Tracing", font = "Impact 30", fg= "white", bg= "dark red").place(x=40, y= 20)
 Label(window, text = "This form will help track down people who are being diagnosed with the virus or ", fg= "white", bg= "dark red").place(x= 45, y= 80)
 Label(window, text = "experiencing symptoms. This can lead to timely detection and treatment, as well as", fg= "white", bg= "dark red").place(x= 15, y= 97)
-Label(window, text = "preventing it from spreading further.", fg= "white", bg= "dark red").place(x= 15, y= 114)
+Label(window, text = "preventing it from spreading further. Search Names...", fg= "white", bg= "dark red").place(x= 15, y= 114)
 
 def search_names(): # function to open window 3
     search_name = entry_search.get().lower()
@@ -44,7 +44,6 @@ def search_names(): # function to open window 3
                     else:
                         # Handle cases where the data is not complete
                         entry = f"Name: {first_name} {last_name}\nData is incomplete.\n\n"
-
                     found_entries.append(entry)
 
             if found_entries:
@@ -55,7 +54,6 @@ def search_names(): # function to open window 3
                 result_window.configure(bg="gray")
                 text = Text(result_window, width=40, height=36)
                 text.place(x=10, y=10)
-
                 for entry in found_entries:
                     text.insert(END, entry)
             else:
@@ -63,6 +61,7 @@ def search_names(): # function to open window 3
     else:
         messagebox.showwarning("Search Error", "Please enter a name to search.")
 
+# Entry widget for search query
 entry_search = Entry(window, width= 30, bd= 3)
 entry_search.place(x= 117, y= 155)
 button_search = Button(window, text= "Search", font = "verdana 8 bold", width = 8, bd = 4, command= search_names)
