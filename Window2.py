@@ -31,13 +31,9 @@ class Display2:
         Label(window2, text = "Contact Details", font = "verdana 12 bold").place(x= 5, y= 5)
         
         # label, for name
-        label_first_name = Label(window2, text = "First Name", font = "verdana 8 bold")
-        label_middle_name = Label(window2, text = "Middle Name", font = "verdana 8 bold")
-        label_last_name = Label(window2, text = "Last Name", font = "verdana 8 bold")
-        label_first_name.place(x= 10, y= 35)
-        label_middle_name.place(x= 170, y= 35)
-        label_last_name.place(x= 330, y= 35)
-
+        Label(window2, text = "First Name", font = "verdana 8 bold").place(x= 10, y= 35)
+        Label(window2, text = "Middle Name", font = "verdana 8 bold").place(x= 170, y= 35)
+        Label(window2, text = "Last Name", font = "verdana 8 bold").place(x= 330, y= 35)
         # entry, for name
         entry_first_name = Entry(window2, width = 23)
         entry_middle_name = Entry(window2, width = 23)
@@ -50,18 +46,21 @@ class Display2:
         Label(window2, text = "Date of Birth", font = "verdana 8 bold").place(x= 10, y= 85)
         Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 10, y= 100)
         # entry, for date of birth
-        date_of_birth = Entry(window2, width = 15).place(x= 10, y= 120)
+        entry_date_of_birth = Entry(window2, width = 15)
+        entry_date_of_birth.place(x= 10, y= 120)
 
         # label, for date of submission
         Label(window2, text = "Date of Submission ", font = "verdana 8 bold").place(x= 130, y= 85)
         Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 130, y= 100)
         # entry, for date of submission
-        date_of_submission = Entry(window2, width = 22).place(x= 130, y= 120)
-    
+        entry_date_of_submission = Entry(window2, width = 22)
+        entry_date_of_submission.place(x= 130, y= 120)
+
         # label, for phone number
         Label(window2, text = "Phone Number", font = "verdana 8 bold").place(x= 290, y= 85)
         # entry, for phone number
-        number = Entry(window2, width = 17).place(x= 280, y= 120)
+        entry_number = Entry(window2, width = 17)
+        entry_number.place(x= 280, y= 120)
 
         # label, for sex
         Label(window2, text = "Sex", font = "verdana 8 bold").place(x= 400, y= 85)
@@ -72,7 +71,8 @@ class Display2:
     
         # label, for address
         Label(window2, text = "Address", font = "verdana 8 bold").place(x= 10, y= 150)
-        address = Entry(window2, width = 77).place(x= 10, y= 170)
+        entry_address = Entry(window2, width = 77)
+        entry_address.place(x= 10, y= 170)
 
         # label for health details
         Label(window2, text = "Health Details", font = "verdana 12 bold").place(x= 5, y= 220)
@@ -96,13 +96,15 @@ class Display2:
         Label(window2, text = "Date of Onset", font = "verdana 8 bold").place(x= 300, y= 250)
         Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place (x= 300, y= 265)  
         # entry, for date of submission
-        Entry(window2, width = 15).place(x= 300, y= 285)
-
+        entry_date_of_submission2 = Entry(window2, width = 15)
+        entry_date_of_submission2.place(x= 300, y= 285)
+        
         # have you traveled to any places when you diagnosed with coronavirus
         Label(window2, text = "What places have you been when experiencing this symptom/s?", font = "verdana 8 bold").place(x= 10, y= 350)
         Label(window2, text = "State the details of your travel. (Date, Places, etc.)", font = "verdana 7").place(x= 10, y= 365)
         # entry, for date of submission
-        Text(window2, width = 58, height = 3).place(x= 10, y= 385)
+        text_places = Text(window2, width = 58, height = 3)
+        text_places.place(x= 10, y= 385)
         
         # label for emergency contact
         Label(window2, text = "Emergency Contact Information", font = "verdana 12 bold").place(x= 5, y= 465)
@@ -111,12 +113,15 @@ class Display2:
         Label(window2, text = "Address", font = "verdana 8 bold").place(x= 10, y= 535)
         Label(window2, text = "Relationship", font = "verdana 8 bold").place(x= 10, y= 555)
         # entry, for emergency contact information
-        Entry(window2, width = 23).place(x= 140, y= 495)
-        Entry(window2, width = 23).place(x= 140, y= 515)
-        Entry(window2, width = 23).place(x= 140, y= 535)
-        Entry(window2, width = 23).place(x= 140, y= 555)
+        entry_name = Entry(window2, width = 23)
+        entry_phone = Entry(window2, width = 23)
+        entry_address2 = Entry(window2, width = 23)
+        entry_relationship = (window2, width = 23)
+        entry_name.place(x= 140, y= 495)
+        entry_phone.place(x= 140, y= 515)
+        entry_address2.place(x= 140, y= 535)
+        entry_relationship.place(x= 140, y= 555)
 
-        
         # button, to submit
         bttn3 = Button(window2, text = "Submit", font = "verdana 10 bold", command= add_data).place(x=210, y= 600)
             # if submitted, append into file
