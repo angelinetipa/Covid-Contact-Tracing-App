@@ -15,11 +15,11 @@ Label(window, text = "preventing it from spreading further.").place(x= 15, y= 90
 def open_window3(): # function to open window 3
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
-    window2.geometry("490x600")
+    window2.geometry("490x640")
     window2.resizable(True,False)
     search_name = entry_search.get()
     text_result = Text(window2, wrap= WORD, state= DISABLED)
-    text_result.grid(row=6, column=0, columnspan=2, padx=10, pady=10)
+    text_result.place()
     if search_name:
         # read file
         with open("COVID-19 cases.txt", "r") as file:
