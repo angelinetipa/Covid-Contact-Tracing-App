@@ -3,22 +3,26 @@ class Window:
     
     def open(): # function to open window 2
         def add_data(): # function to append information into file
-            FName = first_name.get()
-            MName = middle_name.get()
-            LName = last_name.get()
-            DoBirth = date_of_birth.get()
-            Number = number.get()
-            Sex = Sex.get()
-            Address = address.get()
-            DoSubmission = date_of_submission.get()
+            try: 
+                FName = first_name.get()
+                MName = middle_name.get()
+                LName = last_name.get()
+                DoBirth = date_of_birth.get()
+                Number = number.get()
+                Sex = Sex.get()
+                Address = address.get()
+                DoSubmission = date_of_submission.get()
 
-            with open("COVID-19 cases.txt", "w") as infofile:
-                infofile.write(f"""Name: {FName} {MName} {LName}  
-                            Date of Birth: {DoBirth}  
-                            Phone: {Number}  
-                            Sex: {Sex}  
-                            Address: {Address}  
-                            Date of Submission: {DoSubmission}""") 
+                with open("COVID-19 cases.txt", "w") as infofile:
+                    infofile.write(f"""Name: {FName} {MName} {LName}  
+                                Date of Birth: {DoBirth}  
+                                Phone: {Number}  
+                                Sex: {Sex}  
+                                Address: {Address}  
+                                Date of Submission: {DoSubmission}""") 
+            except Exception as e:
+                print("Error: ", e)
+
                            
         window2 = Toplevel()
         window2.title("COVID-19 Contact Tracing Form")
