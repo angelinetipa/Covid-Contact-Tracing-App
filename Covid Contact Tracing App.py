@@ -60,7 +60,11 @@ def open_window2(): # function to open window 2
         Address = entry_address.get()
         DoSubmission = entry_date_of_submission.get()
         Health = health.get()
-        Symptoms = symptoms.get()
+        Symptoms = ",".join([symptom for symptom, var in [
+        ("Fever", symptom_fever.get()),
+        ("Cough", symptom_cough.get()),
+        ("Breathing Difficulty", symptom_breathing_difficulty.get()),
+        ("Loss of taste/smell", symptom_loss_of_taste_smell.get())] if var == 1])
         DoOnset = entry_date_of_onset.get()
         Places = entry_text_places.get("1.0", "end")
         Name = entry_name.get()
@@ -144,14 +148,19 @@ def open_window2(): # function to open window 2
     # radiobutton, when showing symptoms of COVID 19
     Radiobutton(frame2, text = "Showing COVID-19 symptoms", variable = health, value = "Showing").place(x= 10, y= 70)
 
-    symptoms = StringVar()        
+    # Create separate IntVar() variables for each symptom
+    symptom_fever = IntVar()
+    symptom_cough = IntVar()
+    symptom_breathing_difficulty = IntVar()
+    symptom_loss_of_taste_smell = IntVar()    
     # Which of the following conditions you currently have during ths time?
     Label(frame2, text = "Which of the following conditions you have during this time?", font = "verdana 8 bold").place(x= 10, y= 99)
-    # chechbutton for conditions
-    Checkbutton(frame2, text = "Fever", variable=symptoms).place(x= 10, y= 115)  
-    Checkbutton(frame2, text = "Cough", variable=symptoms).place(x= 90, y= 115)  
-    Checkbutton(frame2, text = "Breathing Difficulty", variable=symptoms).place(x= 180, y= 115)  
-    Checkbutton(frame2, text = "Loss of taste/smell", variable=symptoms).place(x= 330, y= 115)  
+    # Checkbuttons for conditions
+    Checkbutton(frame2, text="Fever", variable=symptom_fever, onvalue=1, offvalue=0).place(x=10, y=115)
+    Checkbutton(frame2, text="Cough", variable=symptom_cough, onvalue=1, offvalue=0).place(x=90, y=115)
+    Checkbutton(frame2, text="Breathing Difficulty", variable=symptom_breathing_difficulty, onvalue=1, offvalue=0).place(x=180, y=115)
+    Checkbutton(frame2, text="Loss of taste/smell", variable=symptom_loss_of_taste_smell, onvalue=1, offvalue=0).place(x=330, y=115)
+
 
     # when it started
     Label(frame2, text = "Date of Onset", font = "verdana 8 bold").place(x= 300, y= 35)
