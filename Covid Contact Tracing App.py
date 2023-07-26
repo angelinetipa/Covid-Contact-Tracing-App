@@ -39,8 +39,9 @@ def open_window3(): # function to open window 3
             # else show info no found
             else:
                 messagebox.showinfo("No Match", "No matching entries found.")
-        # if no entry show warning
-    
+    # if no entry show warning
+    else:
+        messagebox.showwarning("Search Error", "Please enter a name to search.")
 
 entry_search = Entry(window, width= 30, bd= 3)
 entry_search.place(x= 150, y= 140)
