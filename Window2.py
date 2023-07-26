@@ -1,9 +1,8 @@
 from tkinter import * # import tkinter
-class Window:
+class Display2:
     
     def open(): # function to open window 2
         def add_data(): # function to append information into file
-            try: 
                 FName = first_name.get()
                 MName = middle_name.get()
                 LName = last_name.get()
@@ -20,8 +19,7 @@ class Window:
                                 Sex: {Sex}  
                                 Address: {Address}  
                                 Date of Submission: {DoSubmission}""") 
-            except Exception as e:
-                print("Error: ", e)
+            
 
                            
         window2 = Toplevel()
@@ -29,20 +27,24 @@ class Window:
         window2.geometry("490x640")
         window2.resizable(False,False)
 
-        
-            
-        
         # label for contact details
         Label(window2, text = "Contact Details", font = "verdana 12 bold").place(x= 5, y= 5)
         
         # label, for name
-        Label(window2, text = "First Name", font = "verdana 8 bold").place(x= 10, y= 35)
-        Label(window2, text = "Middle Name", font = "verdana 8 bold").place(x= 170, y= 35)
-        Label(window2, text = "Last Name", font = "verdana 8 bold").place(x= 330, y= 35)
+        label_first_name = Label(window2, text = "First Name", font = "verdana 8 bold")
+        label_middle_name = Label(window2, text = "Middle Name", font = "verdana 8 bold")
+        label_last_name = Label(window2, text = "Last Name", font = "verdana 8 bold")
+        label_first_name.place(x= 10, y= 35)
+        label_middle_name.place(x= 170, y= 35)
+        label_last_name.place(x= 330, y= 35)
+
         # entry, for name
-        first_name = Entry(window2, width = 23).place(x= 10, y= 55)
-        middle_name = Entry(window2, width = 23).place(x= 170, y= 55)
-        last_name = Entry(window2, width = 23).place(x= 330, y= 55)
+        entry_first_name = Entry(window2, width = 23)
+        entry_middle_name = Entry(window2, width = 23)
+        entry_last_name = Entry(window2, width = 23)
+        entry_first_name.place(x= 10, y= 55)
+        entry_middle_name.place(x= 170, y= 55)
+        entry_last_name.place(x= 330, y= 55)
 
         # label, for date of birth
         Label(window2, text = "Date of Birth", font = "verdana 8 bold").place(x= 10, y= 85)
