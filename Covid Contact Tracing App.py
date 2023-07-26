@@ -45,9 +45,9 @@ def open_window3(): # function to open window 3
         messagebox.showwarning("Search Error", "Please enter a name to search.")
 
 entry_search = Entry(window, width= 30, bd= 3)
-entry_search.place(x= 150, y= 140)
-button_search = Button(window, text= "Search", font = "verdana 15", width = 13, bd = 3, command= open_window3)
-button_search.place(x= 150, y= 170)
+entry_search.place(x= 119, y= 145)
+button_search = Button(window, text= "Search", font = "verdana 8", width = 8, bd = 4, command= open_window3)
+button_search.place(x= 307, y= 143)
 
 def open_window2(): # function to open window 2
     def add_data(): # function to append information into file
