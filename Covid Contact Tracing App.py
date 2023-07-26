@@ -3,7 +3,7 @@ from tkinter import messagebox
 
 window = Tk()
 window.title("COVID-19 Contact Tracing App") # window title
-window.geometry("490x300") # window geometry
+window.geometry("490x250") # window geometry
 window.resizable(False,False) # window not resizable
 window.configure(bg="dark red")
 
@@ -45,9 +45,9 @@ def open_window3(): # function to open window 3
         messagebox.showwarning("Search Error", "Please enter a name to search.")
 
 entry_search = Entry(window, width= 30, bd= 3)
-entry_search.place(x= 119, y= 145)
+entry_search.place(x= 117, y= 155)
 button_search = Button(window, text= "Search", font = "verdana 8 bold", width = 8, bd = 4, command= open_window3)
-button_search.place(x= 307, y= 143)
+button_search.place(x= 305, y= 153)
 
 def open_window2(): # function to open window 2
     def add_data(): # function to append information into file
@@ -173,10 +173,10 @@ def open_window2(): # function to open window 2
         # if submitted, append into file
 
 label_add_data = Label(window, text= "Add Data?", font= "verdana 8", fg= "white", bg= "dark red")
-label_add_data.place(x=180, y= 190)
+label_add_data.place(x=180, y= 210)
 # button, to add information  
 button_add_data = Button(window, text= "Click here", font = "verdana 6", fg= "white", bg= "dark red", command= open_window2)
-button_add_data.place(x= 250, y= 192)
+button_add_data.place(x= 250, y= 211)
 
 
 
