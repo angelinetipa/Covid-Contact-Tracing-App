@@ -23,7 +23,12 @@ def open_window3(): # function to open window 3
     if search_name:
         # read file
         with open("COVID-19 cases.txt", "r") as file:
-        # for every line in file find the entry 
+            found_entries = []
+            # for every line in file find the entry 
+            for line in file:
+                first_name, middle_name, last_name = line.strip().split(",")
+                if search_name.lower() in first_name.lower() or search_name.lower() in last_name.lower():
+        
         # if found name append
         # else show info no found
         # if no entry show warning
