@@ -16,7 +16,7 @@ Label(window, text = "preventing it from spreading further.", fg= "white", bg= "
 def open_window3(): # function to open window 3
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
-    window2.geometry("490x650")
+    window2.geometry("490x670")
     window2.resizable(True,False)
     search_name = entry_search.get()
     text_result = Text(window2, wrap= WORD, state= DISABLED)
@@ -71,11 +71,11 @@ def open_window2(): # function to open window 2
 
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
-    window2.geometry("500x640")
+    window2.geometry("500x670")
     window2.configure(bg="gray")
     window2.resizable(False,False)
 
-    frame1 = Frame(window2, width= 480, height= 210, highlightbackground= "dark red", highlightthickness= 2)
+    frame1 = Frame(window2, width= 480, height= 205, highlightbackground= "dark red", highlightthickness= 2)
     frame1.place(x= 10, y= 10)
     # label for contact details
     Label(frame1, text = "Contact Details", font = "verdana 12 bold").place(x= 5, y= 5)
@@ -125,7 +125,7 @@ def open_window2(): # function to open window 2
     entry_address.place(x= 10, y= 170)
 
     frame2 = Frame(window2, width= 480, height= 250, highlightbackground= "dark red", highlightthickness= 2)
-    frame2.place(x= 10, y= 230)
+    frame2.place(x= 10, y= 225)
     # label for health details
     Label(frame2, text = "Health Details", font = "verdana 12 bold").place(x= 5, y= 5)
     Label(frame2, text = "Select that applies to your situation:", font = "verdana 8 bold").place(x= 10, y= 35)
@@ -137,12 +137,12 @@ def open_window2(): # function to open window 2
     Radiobutton(frame2, text = "Showing COVID-19 symptoms", variable = Health, value = "Showing").place(x= 10, y= 70)
             
     # Which of the following conditions you currently have during ths time?
-    Label(frame2, text = "Which of the following conditions you have during this time?", font = "verdana 8 bold").place(x= 10, y= 100)
+    Label(frame2, text = "Which of the following conditions you have during this time?", font = "verdana 8 bold").place(x= 10, y= 99)
     # chechbutton for conditions
     Checkbutton(frame2, text = "Fever").place(x= 10, y= 115)  
     Checkbutton(frame2, text = "Cough").place(x= 90, y= 115)  
     Checkbutton(frame2, text = "Breathing Difficulty").place(x= 180, y= 115)  
-    Checkbutton(frame2, text = "Loss of taste/smell").place(x= 325, y= 115)  
+    Checkbutton(frame2, text = "Loss of taste/smell").place(x= 330, y= 115)  
 
     # when it started
     Label(frame2, text = "Date of Onset", font = "verdana 8 bold").place(x= 300, y= 35)
@@ -152,31 +152,35 @@ def open_window2(): # function to open window 2
     entry_date_of_submission2.place(x= 300, y= 70)
         
     # have you traveled to any places when you diagnosed with coronavirus
-    Label(frame2, text = "What places have you been when experiencing this symptom/s?", font = "verdana 8 bold").place(x= 10, y= 145)
+    Label(frame2, text = "What places have you been when experiencing this symptom/s?", font = "verdana 8 bold").place(x= 10, y= 144)
     Label(frame2, text = "State the details of your travel. (Date, Places, etc.)", font = "verdana 7").place(x= 10, y= 160)
     # entry, for date of submission
     text_places = Text(frame2, width = 56, height = 3)
     text_places.place(x= 10, y= 180)
-        
+    
+
+    frame3 = Frame(window2, width= 480, height= 130, highlightbackground= "dark red", highlightthickness= 2)
+    frame3.place(x= 10, y= 485)
     # label for emergency contact
-    Label(window2, text = "Emergency Contact Information", font = "verdana 12 bold").place(x= 5, y= 465)
-    Label(window2, text = "Name", font = "verdana 8 bold").place(x= 10, y= 495)
-    Label(window2, text = "Phone ", font = "verdana 8 bold").place(x= 10, y= 515)
-    Label(window2, text = "Address", font = "verdana 8 bold").place(x= 10, y= 535)
-    Label(window2, text = "Relationship", font = "verdana 8 bold").place(x= 10, y= 555)
+    Label(frame3, text = "Emergency Contact Information", font = "verdana 12 bold").place(x= 5, y= 5)
+    Label(frame3, text = "Name", font = "verdana 8 bold").place(x= 10, y= 35)
+    Label(frame3, text = "Phone ", font = "verdana 8 bold").place(x= 10, y= 55)
+    Label(frame3, text = "Relationship", font = "verdana 8 bold").place(x= 10, y= 75)
+    Label(frame3, text = "Address", font = "verdana 8 bold").place(x= 10, y= 95)
+    
     # entry, for emergency contact information
-    entry_name = Entry(window2, width = 23)
-    entry_phone = Entry(window2, width = 23)
-    entry_address2 = Entry(window2, width = 23)
-    entry_relationship = Entry(window2, width = 23)
-    entry_name.place(x= 140, y= 495)
-    entry_phone.place(x= 140, y= 515)
-    entry_address2.place(x= 140, y= 535)
-    entry_relationship.place(x= 140, y= 555)
+    entry_name = Entry(frame3, width = 23)
+    entry_phone = Entry(frame3, width = 23)
+    entry_relationship = Entry(frame3, width = 23)
+    entry_address2 = Entry(frame3, width = 23)
+    entry_name.place(x= 140, y= 37)
+    entry_phone.place(x= 140, y= 57)
+    entry_relationship.place(x= 140, y= 77)
+    entry_address2.place(x= 140, y= 97)
 
     # button, to submit
-    button_submit = Button(window2, text = "Submit", font = "verdana 10 bold", command= add_data)
-    button_submit.place(x=210, y= 600)
+    button_submit = Button(window2, text = "Submit", font = "verdana 13 bold", command= add_data)
+    button_submit.place(x=205, y= 625)
         # if submitted, append into file
 
 label_add_data = Label(window, text= "Add Data?", font= "verdana 8", fg= "white", bg= "dark red")
