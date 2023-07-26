@@ -124,37 +124,39 @@ def open_window2(): # function to open window 2
     entry_address = Entry(frame1, width = 75)
     entry_address.place(x= 10, y= 170)
 
+    frame2 = Frame(window2, width= 480, height= 250, highlightbackground= "dark red", highlightthickness= 2)
+    frame2.place(x= 10, y= 230)
     # label for health details
-    Label(window2, text = "Health Details", font = "verdana 12 bold").place(x= 5, y= 220)
-    Label(window2, text = "Select that applies to your situation:", font = "verdana 8 bold").place(x= 10, y= 250)
+    Label(frame2, text = "Health Details", font = "verdana 12 bold").place(x= 5, y= 5)
+    Label(frame2, text = "Select that applies to your situation:", font = "verdana 8 bold").place(x= 10, y= 35)
 
     Health = StringVar()  
     # radiobutton, when diagnosed with COVID 19
-    Radiobutton(window2, text = "Diagnosed with COVID-19", variable = Health, value = "Diagnosed").place(x= 10, y= 265)
+    Radiobutton(frame2, text = "Diagnosed with COVID-19", variable = Health, value = "Diagnosed").place(x= 10, y= 50)
     # radiobutton, when showing symptoms of COVID 19
-    Radiobutton(window2, text = "Showing COVID-19 symptoms", variable = Health, value = "Showing").place(x= 10, y= 285)
+    Radiobutton(frame2, text = "Showing COVID-19 symptoms", variable = Health, value = "Showing").place(x= 10, y= 70)
             
     # Which of the following conditions you currently have during ths time?
-    Label(window2, text = "Which of the following conditions you have during this time?", font = "verdana 8 bold").place(x= 10, y= 310)
+    Label(frame2, text = "Which of the following conditions you have during this time?", font = "verdana 8 bold").place(x= 10, y= 100)
     # chechbutton for conditions
-    Checkbutton(window2, text = "Fever").place(x= 10, y= 325)  
-    Checkbutton(window2, text = "Cough").place(x= 80, y= 325)  
-    Checkbutton(window2, text = "Breathing Difficulty").place(x= 160, y= 325)  
-    Checkbutton(window2, text = "Loss of taste/smell").place(x= 305, y= 325)  
+    Checkbutton(frame2, text = "Fever").place(x= 10, y= 115)  
+    Checkbutton(frame2, text = "Cough").place(x= 90, y= 115)  
+    Checkbutton(frame2, text = "Breathing Difficulty").place(x= 180, y= 115)  
+    Checkbutton(frame2, text = "Loss of taste/smell").place(x= 325, y= 115)  
 
     # when it started
-    Label(window2, text = "Date of Onset", font = "verdana 8 bold").place(x= 300, y= 250)
-    Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place (x= 300, y= 265)  
+    Label(frame2, text = "Date of Onset", font = "verdana 8 bold").place(x= 300, y= 35)
+    Label(frame2, text = "(MM/DD/YYYY)", font = "verdana 7").place (x= 300, y= 50)  
     # entry, for date of submission
-    entry_date_of_submission2 = Entry(window2, width = 15)
-    entry_date_of_submission2.place(x= 300, y= 285)
+    entry_date_of_submission2 = Entry(frame2, width = 15)
+    entry_date_of_submission2.place(x= 300, y= 70)
         
     # have you traveled to any places when you diagnosed with coronavirus
-    Label(window2, text = "What places have you been when experiencing this symptom/s?", font = "verdana 8 bold").place(x= 10, y= 350)
-    Label(window2, text = "State the details of your travel. (Date, Places, etc.)", font = "verdana 7").place(x= 10, y= 365)
+    Label(frame2, text = "What places have you been when experiencing this symptom/s?", font = "verdana 8 bold").place(x= 10, y= 145)
+    Label(frame2, text = "State the details of your travel. (Date, Places, etc.)", font = "verdana 7").place(x= 10, y= 160)
     # entry, for date of submission
-    text_places = Text(window2, width = 58, height = 3)
-    text_places.place(x= 10, y= 385)
+    text_places = Text(frame2, width = 56, height = 3)
+    text_places.place(x= 10, y= 180)
         
     # label for emergency contact
     Label(window2, text = "Emergency Contact Information", font = "verdana 12 bold").place(x= 5, y= 465)
