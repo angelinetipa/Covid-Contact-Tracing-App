@@ -13,15 +13,9 @@ Label(window, text = "This form will help track down people who are being diagno
 Label(window, text = "experiencing symptoms. This can lead to timely detection and treatment, as well as", fg= "white", bg= "dark red").place(x= 15, y= 97)
 Label(window, text = "preventing it from spreading further.", fg= "white", bg= "dark red").place(x= 15, y= 114)
 
-def open_window3(): # function to open window 3
-    search_name = entry_search.get()
+def search_names(): # function to open window 3
+    search_name = entry_search.get().lower()
     if search_name:
-        window2 = Toplevel()
-        window2.title("COVID-19 Contact Tracing Form")
-        window2.geometry("490x670")
-        window2.resizable(True,False)
-        text_result = Text(window2, wrap= WORD, state= DISABLED)
-        text_result.place()
         # read file
         with open("COVID-19 cases.txt", "r") as file:
             found_entries = []
@@ -32,11 +26,15 @@ def open_window3(): # function to open window 3
                 if search_name.lower() in first_name.lower() or search_name.lower() in last_name.lower():
                     found_entries.append(f"Name: {first_name} {middle_name} {last_name}")
             if found_entries:
-                result = "\n".join(found_entries)
-                text_result.config(state=NORMAL)
-                text_result.delete("1.0", END)
-                text_result.insert(END, result)
-                text_result.config(state=DISABLED)
+                result_window = Toplevel()
+                result_window.title("Data Results")
+                result_window.geometry("500x670")
+                window.resizable(False,False)
+                text = Text(result_window, width=40, height=100)
+                text.pack()
+
+                for entry in found_entries:
+                    text.insert(END, entry)
             # else show info no found
             else:
                 messagebox.showinfo("No Match", "No matching entries found.")
@@ -46,7 +44,7 @@ def open_window3(): # function to open window 3
 
 entry_search = Entry(window, width= 30, bd= 3)
 entry_search.place(x= 117, y= 155)
-button_search = Button(window, text= "Search", font = "verdana 8 bold", width = 8, bd = 4, command= open_window3)
+button_search = Button(window, text= "Search", font = "verdana 8 bold", width = 8, bd = 4, command= search_names)
 button_search.place(x= 305, y= 153)
 
 
