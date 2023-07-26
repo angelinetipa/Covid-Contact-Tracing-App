@@ -21,20 +21,20 @@ def search_names(): # function to open window 3
             found_entries = []
             # for every line in file find the entry 
             for line in file:
-                first_name, middle_name, last_name = line.strip().split(",")
+                first_name, middle_name, last_name, sex= line.strip().split(",")
                 # if found name append
                 if search_name.lower() in first_name.lower() or search_name.lower() in last_name.lower():
-                    found_entries.append(f"Name: {first_name} {middle_name} {last_name}")
+                    found_entries.append(f"Name: {first_name} {middle_name} {last_name} {sex} ")
             if found_entries:
                 result_window = Toplevel()
                 result_window.title("Data Results")
-                result_window.geometry("500x670")
-                window.resizable(False,False)
-                text = Text(result_window, width=40, height=100)
-                text.pack()
+                result_window.geometry("1000x670")
+                result_window.resizable(False,False)
+                textr = Text(result_window, width=40, height=100)
+                textr.pack()
 
                 for entry in found_entries:
-                    text.insert(END, entry)
+                    textr.insert(END, entry)
             # else show info no found
             else:
                 messagebox.showinfo("No Match", "No matching entries found.")
@@ -59,13 +59,23 @@ def open_window2(): # function to open window 2
         Sex = sex.get()
         Address = entry_address.get()
         DoSubmission = entry_date_of_submission.get()
+        Health = health.get()
+        Symptoms = symptoms.get()
+        DoOnset = entry_date_of_onset.get()
+        Places = entry_text_places.get("1.0", "end")
+        Name = entry_name.get()
+        Phone = entry_phone.get()
+        Relationship = entry_relationship.get()
+        Address2 = entry_address2.get()
 
-        if first_name and middle_name and last_name:
-            with open("COVID-19 cases.txt", "a") as file:
-                file.write(f"{first_name},{middle_name},{last_name}\n")
-            messagebox.showinfo("Success", "Data added successfully!")
-        else:
+        # Check if any of the required fields are empty
+        if not (first_name and last_name and DoBirth and Number and Sex and Address and DoSubmission and Health and Symptoms and DoOnset and Places and Name and Phone and Relationship and Address2):
             messagebox.showwarning("Incomplete Data", "Please fill in all the fields.")
+        else:
+            # Save the data to the file
+            with open("COVID-19 cases.txt", "a") as file:
+                file.write(f"{first_name},{middle_name},{last_name},{DoBirth},{Number},{Sex},{Address},{DoSubmission},{Health},{Symptoms},{DoOnset},{Places},{Name},{Phone},{Relationship},{Address2}\n")
+            messagebox.showinfo("Success", "Data added successfully!")
 
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
@@ -128,33 +138,34 @@ def open_window2(): # function to open window 2
     Label(frame2, text = "Health Details", font = "verdana 12 bold").place(x= 5, y= 5)
     Label(frame2, text = "Select that applies to your situation:", font = "verdana 8 bold").place(x= 10, y= 35)
 
-    Health = StringVar()  
+    health = StringVar()  
     # radiobutton, when diagnosed with COVID 19
-    Radiobutton(frame2, text = "Diagnosed with COVID-19", variable = Health, value = "Diagnosed").place(x= 10, y= 50)
+    Radiobutton(frame2, text = "Diagnosed with COVID-19", variable = health, value = "Diagnosed").place(x= 10, y= 50)
     # radiobutton, when showing symptoms of COVID 19
-    Radiobutton(frame2, text = "Showing COVID-19 symptoms", variable = Health, value = "Showing").place(x= 10, y= 70)
-            
+    Radiobutton(frame2, text = "Showing COVID-19 symptoms", variable = health, value = "Showing").place(x= 10, y= 70)
+
+    symptoms = StringVar()        
     # Which of the following conditions you currently have during ths time?
     Label(frame2, text = "Which of the following conditions you have during this time?", font = "verdana 8 bold").place(x= 10, y= 99)
     # chechbutton for conditions
-    Checkbutton(frame2, text = "Fever").place(x= 10, y= 115)  
-    Checkbutton(frame2, text = "Cough").place(x= 90, y= 115)  
-    Checkbutton(frame2, text = "Breathing Difficulty").place(x= 180, y= 115)  
-    Checkbutton(frame2, text = "Loss of taste/smell").place(x= 330, y= 115)  
+    Checkbutton(frame2, text = "Fever", variable=symptoms).place(x= 10, y= 115)  
+    Checkbutton(frame2, text = "Cough", variable=symptoms).place(x= 90, y= 115)  
+    Checkbutton(frame2, text = "Breathing Difficulty", variable=symptoms).place(x= 180, y= 115)  
+    Checkbutton(frame2, text = "Loss of taste/smell", variable=symptoms).place(x= 330, y= 115)  
 
     # when it started
     Label(frame2, text = "Date of Onset", font = "verdana 8 bold").place(x= 300, y= 35)
     Label(frame2, text = "(MM/DD/YYYY)", font = "verdana 7").place (x= 300, y= 50)  
     # entry, for date of submission
-    entry_date_of_submission2 = Entry(frame2, width = 15)
-    entry_date_of_submission2.place(x= 300, y= 70)
+    entry_date_of_onset = Entry(frame2, width = 15)
+    entry_date_of_onset.place(x= 300, y= 70)
         
     # have you traveled to any places when you diagnosed with coronavirus
     Label(frame2, text = "What places have you been when experiencing this symptom/s?", font = "verdana 8 bold").place(x= 10, y= 144)
     Label(frame2, text = "State the details of your travel. (Date, Places, etc.)", font = "verdana 7").place(x= 10, y= 160)
-    # entry, for date of submission
-    text_places = Text(frame2, width = 56, height = 3)
-    text_places.place(x= 10, y= 180)
+    # entry, for places
+    entry_text_places = Text(frame2, width = 56, height = 3)
+    entry_text_places.place(x= 10, y= 180)
     
 
     frame3 = Frame(window2, width= 480, height= 130, highlightbackground= "dark red", highlightthickness= 2)
