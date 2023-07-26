@@ -16,14 +16,19 @@ def open_window3(): # function to open window 3
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
     window2.geometry("490x600")
-    window2.resizable(False,False)
-
-    # read file
-    # for every line in file find the entry
-    # if found name append
-    # else show info no found
-    # if no entry show warning
+    window2.resizable(True,False)
+    search_name = entry_search.get()
+    text_result = Text(window2, wrap= WORD, state= DISABLED)
+    text_result.grid(row=6, column=0, columnspan=2, padx=10, pady=10)
+    if search_name:
+        # read file
+        with open("COVID-19 cases.txt", "r") as file:
+        # for every line in file find the entry 
+        # if found name append
+        # else show info no found
+        # if no entry show warning
     
+
 entry_search = Entry(window, width= 30, bd= 3)
 entry_search.place(x= 150, y= 140)
 button_search = Button(window, text= "Search", font = "verdana 15", width = 13, bd = 3, command= open_window3)
