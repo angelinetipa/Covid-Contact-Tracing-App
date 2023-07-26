@@ -14,18 +14,18 @@ Label(window, text = "preventing it from spreading further.").place(x= 15, y= 70
 
 def open_window2(): # function to open window 2
     def add_data(): # function to append information into file
-        FName = entry_first_name.get()
-        MName = entry_middle_name.get()
-        LName = entry_last_name.get()
+        first_name = entry_first_name.get()
+        middle_name = entry_middle_name.get()
+        last_name = entry_last_name.get()
         DoBirth = entry_date_of_birth.get()
         Number = entry_number.get()
         Sex = sex.get()
         Address = entry_address.get()
         DoSubmission = entry_date_of_submission.get()
 
-        if FName and MName and LName:
+        if first_name and middle_name and last_name:
             with open("COVID-19 cases.txt", "a") as file:
-                file.write(f"{FName},{MName},{LName}\n")
+                file.write(f"{first_name},{middle_name},{last_name}\n")
             messagebox.showinfo("Success", "Data added successfully!")
         else:
             messagebox.showwarning("Incomplete Data", "Please fill in all the fields.")
