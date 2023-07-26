@@ -27,9 +27,16 @@ def open_window3(): # function to open window 3
             # for every line in file find the entry 
             for line in file:
                 first_name, middle_name, last_name = line.strip().split(",")
+                # if found name append
                 if search_name.lower() in first_name.lower() or search_name.lower() in last_name.lower():
+                    found_entries.append(f"Name: {first_name} {middle_name} {last_name}")
+            if found_entries:
+                result = "\n".join(found_entries)
+                text_result.config(state=NORMAL)
+                text_result.delete("1.0", END)
+                text_result.insert(END, result)
+                text_result.config(state=DISABLED)
         
-        # if found name append
         # else show info no found
         # if no entry show warning
     
