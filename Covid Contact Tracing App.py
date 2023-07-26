@@ -24,35 +24,15 @@ def search_names(): # function to open window 3
                 data = line.strip().split(",")
                 first_name, last_name, *_ = line.strip().split(",")
                 if search_name.lower() in first_name.lower() or search_name.lower() in last_name.lower():
-                    # Check if data has at least 18 elements before accessing index 12 and 13
-                    if len(data) >= 18:
-                        entry = f"Name: {first_name} {data[2]} {last_name}\n" \
-                                f"Sex: {data[3]}\n" \
-                                f"Date of Birth: {data[4]}\n" \
-                                f"Phone Number: {data[5]}\n" \
-                                f"Address: {data[6]}\n" \
-                                f"Date of Submission: {data[7]}\n" \
-                                f"Health: {data[8]}\n" \
-                                f"Symptoms: {', '.join([symptom for symptom, var in zip(['Fever', 'Cough', 'Breathing Difficulty', 'Loss of taste/smell'], data[8:12]) if var == '1'])}\n" \
-                                f"Date of Onset: {data[12]}\n" \
-                                f"Places: {data[13]}\n" \
-                                f"Emergency Contact Information:\n" \
-                                f"Name: {data[14]}\n" \
-                                f"Phone: {data[15]}\n" \
-                                f"Relationship: {data[16]}\n" \
-                                f"Address: {data[17]}\n\n"
-                    else:
-                        # Handle cases where the data is not complete
-                        entry = f"Name: {first_name} {last_name}\nData is incomplete.\n\n"
-                    found_entries.append(entry)
+                    found_entries.append(data)
 
             if found_entries:
                 result_window = Toplevel()
                 result_window.title("Data Results")
-                result_window.geometry("350x600")
+                result_window.geometry("1100x650")
                 result_window.resizable(False, False)
                 result_window.configure(bg="gray")
-                text = Text(result_window, width=40, height=36)
+                text = Text(result_window, width=134, height=39)
                 text.place(x=10, y=10)
                 for entry in found_entries:
                     text.insert(END, entry)
