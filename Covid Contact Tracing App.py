@@ -68,6 +68,21 @@ button_search = Button(window, text= "Search", font = "verdana 8 bold", width = 
 button_search.place(x= 305, y= 153)
 
 def open_window2(): # function to open window 2
+    def clear_entry_fields():
+        entry_first_name.delete(0, END)
+        entry_middle_name.delete(0, END)
+        entry_last_name.delete(0, END)
+        entry_date_of_birth.delete(0, END)
+        entry_number.delete(0, END)
+        entry_address.delete(0, END)
+        entry_date_of_submission.delete(0, END)
+        entry_date_of_onset.delete(0, END)
+        entry_text_places.delete("1.0", END)
+        entry_name.delete(0, END)
+        entry_phone.delete(0, END)
+        entry_relationship.delete(0, END)
+        entry_address2.delete(0, END)
+    
     def add_data(): # function to append information into file
         first_name = entry_first_name.get()
         middle_name = entry_middle_name.get()
@@ -97,6 +112,8 @@ def open_window2(): # function to open window 2
             # Save the data to the file
             with open("COVID-19 cases.txt", "a") as file:
                 file.write(f"{first_name},{middle_name},{last_name},{DoBirth},{Number},{Sex},{Address},{DoSubmission},{Health},{Symptoms},{DoOnset},{Places},{Name},{Phone},{Relationship},{Address2}\n")
+            # Clear the entry fields after successful submission
+            clear_entry_fields()
             messagebox.showinfo("Success", "Data added successfully!")
 
     window2 = Toplevel()
