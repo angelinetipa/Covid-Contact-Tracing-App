@@ -5,12 +5,13 @@ window = Tk()
 window.title("COVID-19 Contact Tracing App") # window title
 window.geometry("490x300") # window geometry
 window.resizable(False,False) # window not resizable
+window.configure(bg="dark red")
 
 # label, description for app
-Label(window, text = "COVID-19 Contact Tracing", font = "verdana 14 bold").place(x= 110, y= 20)
-Label(window, text = "This form will help track down people who are being diagnosed with the virus or ").place(x= 45, y= 50)
-Label(window, text = "experiencing symptoms. This can lead to timely detection and treatment, as well as").place(x= 15, y= 70)
-Label(window, text = "preventing it from spreading further.").place(x= 15, y= 90)
+Label(window, text = "COVID-19 Contact Tracing", font = "Impact 30", fg= "white", bg= "dark red").place(x=40, y= 20)
+Label(window, text = "This form will help track down people who are being diagnosed with the virus or ", fg= "white", bg= "dark red").place(x= 45, y= 80)
+Label(window, text = "experiencing symptoms. This can lead to timely detection and treatment, as well as", fg= "white", bg= "dark red").place(x= 15, y= 97)
+Label(window, text = "preventing it from spreading further.", fg= "white", bg= "dark red").place(x= 15, y= 114)
 
 def open_window3(): # function to open window 3
     window2 = Toplevel()
