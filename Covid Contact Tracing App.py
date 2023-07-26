@@ -11,7 +11,7 @@ Label(window, text = "COVID-19 Contact Tracing", font = "verdana 14 bold").place
 Label(window, text = "This form will help track down people who are being diagnosed with the virus or ").place(x= 45, y= 50)
 Label(window, text = "experiencing symptoms. This can lead to timely detection and treatment, as well as").place(x= 15, y= 70)
 Label(window, text = "preventing it from spreading further.").place(x= 15, y= 90)
-# button, to search entries 
+
 def open_window3(): # function to open window 3
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
@@ -21,10 +21,10 @@ def open_window3(): # function to open window 3
         # for all info in files
             # if the name in data
                 # display that its already submitted
-entry_search = Entry(window, width= 20)
-entry_search.place(x= 170, y= 120)
-button_search = Button(window, text= "Search Data", font = "verdana 12", command= open_window3)
-button_search.place(x= 170, y= 150)
+entry_search = Entry(window, width= 30, bd= 3)
+entry_search.place(x= 150, y= 140)
+button_search = Button(window, text= "Search", font = "verdana 15", width = 13, bd = 3, command= open_window3)
+button_search.place(x= 150, y= 170)
 
 def open_window2(): # function to open window 2
     def add_data(): # function to append information into file
