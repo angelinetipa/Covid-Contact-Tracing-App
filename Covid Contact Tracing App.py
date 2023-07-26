@@ -36,8 +36,9 @@ def open_window3(): # function to open window 3
                 text_result.delete("1.0", END)
                 text_result.insert(END, result)
                 text_result.config(state=DISABLED)
-        
-        # else show info no found
+            # else show info no found
+            else:
+                messagebox.showinfo("No Match", "No matching entries found.")
         # if no entry show warning
     
 
