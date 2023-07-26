@@ -17,10 +17,13 @@ def open_window3(): # function to open window 3
     window2.title("COVID-19 Contact Tracing Form")
     window2.geometry("490x600")
     window2.resizable(False,False)
-    # entry to search names
-        # for all info in files
-            # if the name in data
-                # display that its already submitted
+
+    # read file
+    # for every line in file find the entry
+    # if found name append
+    # else show info no found
+    # if no entry show warning
+    
 entry_search = Entry(window, width= 30, bd= 3)
 entry_search.place(x= 150, y= 140)
 button_search = Button(window, text= "Search", font = "verdana 15", width = 13, bd = 3, command= open_window3)
@@ -151,8 +154,8 @@ def open_window2(): # function to open window 2
 
 
 # button, to add information  
-button_add_data = Button(window, text= "Add Data", font = "verdana 12", command= open_window2)
-button_add_data.place(x= 170, y= 200)
+button_add_data = Button(window, text= "Click here", font = "verdana 6", command= open_window2)
+button_add_data.place(x= 180, y= 230)
 
 
 
