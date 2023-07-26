@@ -11,22 +11,37 @@ Label(window, text = "This form will help track down people who are being diagno
 Label(window, text = "experiencing symptoms. This can lead to timely detection and treatment, as well as").place(x= 15, y= 50)
 Label(window, text = "preventing it from spreading further.").place(x= 15, y= 70)
 
+
 def openwindow2(): # function to open window 2
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
     window2.geometry("490x640")
     window2.resizable(False,False)
+
+    def addtofile(): # function to append information into file
+        FName = first_name.get()
+        MName = middle_name.get()
+        LName = last_name.get()
+        with open("COVID-19 cases.txt", "w") as infofile:
+            infofile.write(f"""Name: {FName} {MName} {LName}  
+                           Date of Birth: {DoBirth.get()}  
+                           Phone: {Number.get()}  
+                           Sex: {Sex.get()}  
+                           Address: {Address.get()}  
+                           Date of Submission: {DoSubmission.get()}""")
+        window2.destroy # after submitting window2 would destroy
+    
     # label for contact details
     Label(window2, text = "Contact Details", font = "verdana 12 bold").place(x= 5, y= 5)
-
+    
     # label, for name
     Label(window2, text = "First Name", font = "verdana 8 bold").place(x= 10, y= 35)
     Label(window2, text = "Middle Name", font = "verdana 8 bold").place(x= 170, y= 35)
     Label(window2, text = "Last Name", font = "verdana 8 bold").place(x= 330, y= 35)
     # entry, for name
-    FName = Entry(window2, width = 23).place(x= 10, y= 55)
-    MName = Entry(window2, width = 23).place(x= 170, y= 55)
-    LName = Entry(window2, width = 23).place(x= 330, y= 55)
+    first_name = Entry(window2, width = 23).place(x= 10, y= 55)
+    middle_name = Entry(window2, width = 23).place(x= 170, y= 55)
+    last_name = Entry(window2, width = 23).place(x= 330, y= 55)
 
     # label, for date of birth
     Label(window2, text = "Date of Birth", font = "verdana 8 bold").place(x= 10, y= 85)
@@ -98,18 +113,13 @@ def openwindow2(): # function to open window 2
     Entry(window2, width = 23).place(x= 140, y= 535)
     Entry(window2, width = 23).place(x= 140, y= 555)
 
-    def addtofile(): # function to append information into file
-        with open("COVID-19 cases.txt", "w") as infofile:
-            infofile.write(f"Name: {FName} {MName} {LName}  Date of Birth: {DoBirth}  Phone: {Number}  Sex: {Sex.get()}  Address: {Address}  Date of Submission: {DoSubmission}")
-        window2.destroy # after submitting window2 would destroy
-
-    def closewindow(): # function to close window
+    
     # button, to submit
-    bttn3 = Button(window2, text = "Submit", font = "verdana 10 bold").place(x=210, y= 600)
+    bttn3 = Button(window2, text = "Submit", font = "verdana 10 bold", command= addtofile).place(x=210, y= 600)
         # if submitted, append into file
 
 # button, to add information
-bttn1 = Button(window, text= "Add Information", font = ("verdana", 12), command= openwindow2).place(x= 170, y= 100)
+bttn1 = Button(window, text= "Add Information", font = "verdana 12", command= openwindow2).place(x= 170, y= 100)
 
 def openwindow3(): # function to open window 3
     window2 = Toplevel()
