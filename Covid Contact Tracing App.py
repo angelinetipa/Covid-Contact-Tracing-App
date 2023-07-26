@@ -47,17 +47,18 @@ def openwindow2(): # function to open window 2
     Label(window2, text = "Date of Birth", font = "verdana 8 bold").place(x= 10, y= 85)
     Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 10, y= 100)
     # entry, for date of birth
-    DoBirth = Entry(window2, width = 15).place(x= 10, y= 120)
+    date_of_birth = Entry(window2, width = 15).place(x= 10, y= 120)
+
     # label, for date of submission
     Label(window2, text = "Date of Submission ", font = "verdana 8 bold").place(x= 130, y= 85)
     Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 130, y= 100)
     # entry, for date of submission
-    DoSubmission = Entry(window2, width = 22).place(x= 130, y= 120)
+    date_of_submission = Entry(window2, width = 22).place(x= 130, y= 120)
  
      # label, for phone number
     Label(window2, text = "Phone Number", font = "verdana 8 bold").place(x= 290, y= 85)
     # entry, for phone number
-    Number = Entry(window2, width = 17).place(x= 280, y= 120)
+    number = Entry(window2, width = 17).place(x= 280, y= 120)
 
     # label, for sex
     Label(window2, text = "Sex", font = "verdana 8 bold").place(x= 400, y= 85)
@@ -68,14 +69,13 @@ def openwindow2(): # function to open window 2
    
     # label, for address
     Label(window2, text = "Address", font = "verdana 8 bold").place(x= 10, y= 150)
-    Address = Entry(window2, width = 77).place(x= 10, y= 170)
+    address = Entry(window2, width = 77).place(x= 10, y= 170)
 
     # label for health details
     Label(window2, text = "Health Details", font = "verdana 12 bold").place(x= 5, y= 220)
     Label(window2, text = "Select that applies to your situation:", font = "verdana 8 bold").place(x= 10, y= 250)
 
-    Health = StringVar() 
-        
+    Health = StringVar()  
     # radiobutton, when diagnosed with COVID 19
     Radiobutton(window2, text = "Diagnosed with COVID-19", variable = Health, value = "Diagnosed").place(x= 10, y= 265)
     # radiobutton, when showing symptoms of COVID 19
