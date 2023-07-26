@@ -21,24 +21,45 @@ def search_names(): # function to open window 3
             found_entries = []
             # for every line in file find the entry 
             for line in file:
-                first_name, middle_name, last_name, sex= line.strip().split(",")
-                # if found name append
+                data = line.strip().split(",")
+                first_name, last_name, *_ = line.strip().split(",")
                 if search_name.lower() in first_name.lower() or search_name.lower() in last_name.lower():
-                    found_entries.append(f"Name: {first_name} {middle_name} {last_name} {sex} ")
+                    # Check if data has at least 18 elements before accessing index 12 and 13
+                    if len(data) >= 18:
+                        entry = f"Name: {first_name} {data[2]} {last_name}\n" \
+                                f"Sex: {data[3]}\n" \
+                                f"Date of Birth: {data[4]}\n" \
+                                f"Phone Number: {data[5]}\n" \
+                                f"Address: {data[6]}\n" \
+                                f"Date of Submission: {data[7]}\n" \
+                                f"Health: {data[8]}\n" \
+                                f"Symptoms: {', '.join([symptom for symptom, var in zip(['Fever', 'Cough', 'Breathing Difficulty', 'Loss of taste/smell'], data[8:12]) if var == '1'])}\n" \
+                                f"Date of Onset: {data[12]}\n" \
+                                f"Places: {data[13]}\n" \
+                                f"Emergency Contact Information:\n" \
+                                f"Name: {data[14]}\n" \
+                                f"Phone: {data[15]}\n" \
+                                f"Relationship: {data[16]}\n" \
+                                f"Address: {data[17]}\n\n"
+                    else:
+                        # Handle cases where the data is not complete
+                        entry = f"Name: {first_name} {last_name}\nData is incomplete.\n\n"
+
+                    found_entries.append(entry)
+
             if found_entries:
                 result_window = Toplevel()
                 result_window.title("Data Results")
-                result_window.geometry("1000x670")
-                result_window.resizable(False,False)
-                textr = Text(result_window, width=40, height=100)
-                textr.pack()
+                result_window.geometry("350x600")
+                result_window.resizable(False, False)
+                result_window.configure(bg="gray")
+                text = Text(result_window, width=40, height=36)
+                text.place(x=10, y=10)
 
                 for entry in found_entries:
-                    textr.insert(END, entry)
-            # else show info no found
+                    text.insert(END, entry)
             else:
                 messagebox.showinfo("No Match", "No matching entries found.")
-    # if no entry show warning
     else:
         messagebox.showwarning("Search Error", "Please enter a name to search.")
 
@@ -46,8 +67,6 @@ entry_search = Entry(window, width= 30, bd= 3)
 entry_search.place(x= 117, y= 155)
 button_search = Button(window, text= "Search", font = "verdana 8 bold", width = 8, bd = 4, command= search_names)
 button_search.place(x= 305, y= 153)
-
-
 
 def open_window2(): # function to open window 2
     def add_data(): # function to append information into file

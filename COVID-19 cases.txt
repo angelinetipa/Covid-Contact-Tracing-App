@@ -1,6 +1,1 @@
-cdvddd,cff,aa
-ma. angeline,tano,tipa
-sdfdsg,fdf,dfgdf,fgdf,gdgd,Male,dfgfdg,fgd,,,,
-,,,,
-ange,tano,tipa,12,56,Male,78,34,,,,
-,,,,
+angeline,tano,tipa,10/30/2003,09283726099,Female,937 P. burgos,10/30/2023,Showing,Cough,10/40/9090,ph
