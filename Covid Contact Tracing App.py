@@ -22,13 +22,19 @@ def openwindow2(): # function to open window 2
         FName = first_name.get()
         MName = middle_name.get()
         LName = last_name.get()
+        DoBirth = date_of_birth.get()
+        Number = number.get()
+        Sex = Sex.get()
+        Address = address.get()
+        DoSubmission = date_of_submission.get()
+
         with open("COVID-19 cases.txt", "w") as infofile:
             infofile.write(f"""Name: {FName} {MName} {LName}  
-                           Date of Birth: {DoBirth.get()}  
-                           Phone: {Number.get()}  
-                           Sex: {Sex.get()}  
-                           Address: {Address.get()}  
-                           Date of Submission: {DoSubmission.get()}""")
+                           Date of Birth: {DoBirth}  
+                           Phone: {Number}  
+                           Sex: {Sex}  
+                           Address: {Address}  
+                           Date of Submission: {DoSubmission}""")
         window2.destroy # after submitting window2 would destroy
     
     # label for contact details
