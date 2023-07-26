@@ -14,14 +14,14 @@ Label(window, text = "experiencing symptoms. This can lead to timely detection a
 Label(window, text = "preventing it from spreading further.", fg= "white", bg= "dark red").place(x= 15, y= 114)
 
 def open_window3(): # function to open window 3
-    window2 = Toplevel()
-    window2.title("COVID-19 Contact Tracing Form")
-    window2.geometry("490x670")
-    window2.resizable(True,False)
     search_name = entry_search.get()
-    text_result = Text(window2, wrap= WORD, state= DISABLED)
-    text_result.place()
     if search_name:
+        window2 = Toplevel()
+        window2.title("COVID-19 Contact Tracing Form")
+        window2.geometry("490x670")
+        window2.resizable(True,False)
+        text_result = Text(window2, wrap= WORD, state= DISABLED)
+        text_result.place()
         # read file
         with open("COVID-19 cases.txt", "r") as file:
             found_entries = []
