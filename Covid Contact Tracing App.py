@@ -16,7 +16,7 @@ Label(window, text = "preventing it from spreading further.", fg= "white", bg= "
 def open_window3(): # function to open window 3
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
-    window2.geometry("490x640")
+    window2.geometry("490x650")
     window2.resizable(True,False)
     search_name = entry_search.get()
     text_result = Text(window2, wrap= WORD, state= DISABLED)
@@ -49,6 +49,8 @@ entry_search.place(x= 117, y= 155)
 button_search = Button(window, text= "Search", font = "verdana 8 bold", width = 8, bd = 4, command= open_window3)
 button_search.place(x= 305, y= 153)
 
+
+
 def open_window2(): # function to open window 2
     def add_data(): # function to append information into file
         first_name = entry_first_name.get()
@@ -69,54 +71,57 @@ def open_window2(): # function to open window 2
 
     window2 = Toplevel()
     window2.title("COVID-19 Contact Tracing Form")
-    window2.geometry("490x640")
+    window2.geometry("500x640")
+    window2.configure(bg="gray")
     window2.resizable(False,False)
 
+    frame1 = Frame(window2, width= 480, height= 210, highlightbackground= "dark red", highlightthickness= 2)
+    frame1.place(x= 10, y= 10)
     # label for contact details
-    Label(window2, text = "Contact Details", font = "verdana 12 bold").place(x= 5, y= 5)
+    Label(frame1, text = "Contact Details", font = "verdana 12 bold").place(x= 5, y= 5)
         
     # label, for name
-    Label(window2, text = "First Name", font = "verdana 8 bold").place(x= 10, y= 35)
-    Label(window2, text = "Middle Name", font = "verdana 8 bold").place(x= 170, y= 35)
-    Label(window2, text = "Last Name", font = "verdana 8 bold").place(x= 330, y= 35)
+    Label(frame1, text = "First Name", font = "verdana 8 bold").place(x= 10, y= 35)
+    Label(frame1, text = "Middle Name", font = "verdana 8 bold").place(x= 168, y= 35)
+    Label(frame1, text = "Last Name", font = "verdana 8 bold").place(x= 325, y= 35)
     # entry, for name
-    entry_first_name = Entry(window2, width = 23)
-    entry_middle_name = Entry(window2, width = 23)
-    entry_last_name = Entry(window2, width = 23)
+    entry_first_name = Entry(frame1, width = 23)
+    entry_middle_name = Entry(frame1, width = 23)
+    entry_last_name = Entry(frame1, width = 23)
     entry_first_name.place(x= 10, y= 55)
-    entry_middle_name.place(x= 170, y= 55)
-    entry_last_name.place(x= 330, y= 55)
+    entry_middle_name.place(x= 168, y= 55)
+    entry_last_name.place(x= 325, y= 55)
 
     # label, for date of birth
-    Label(window2, text = "Date of Birth", font = "verdana 8 bold").place(x= 10, y= 85)
-    Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 10, y= 100)
+    Label(frame1, text = "Date of Birth", font = "verdana 8 bold").place(x= 10, y= 85)
+    Label(frame1, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 10, y= 100)
     # entry, for date of birth
-    entry_date_of_birth = Entry(window2, width = 15)
+    entry_date_of_birth = Entry(frame1, width = 14)
     entry_date_of_birth.place(x= 10, y= 120)
 
     # label, for date of submission
-    Label(window2, text = "Date of Submission ", font = "verdana 8 bold").place(x= 130, y= 85)
-    Label(window2, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 130, y= 100)
+    Label(frame1, text = "Date of Submission ", font = "verdana 8 bold").place(x= 115, y= 85)
+    Label(frame1, text = "(MM/DD/YYYY)", font = "verdana 7").place(x= 115, y= 100)
     # entry, for date of submission
-    entry_date_of_submission = Entry(window2, width = 22)
-    entry_date_of_submission.place(x= 130, y= 120)
+    entry_date_of_submission = Entry(frame1, width = 21)
+    entry_date_of_submission.place(x= 115, y= 120)
 
     # label, for phone number
-    Label(window2, text = "Phone Number", font = "verdana 8 bold").place(x= 290, y= 85)
+    Label(frame1, text = "Phone Number", font = "verdana 8 bold").place(x= 260, y= 85)
     # entry, for phone number
-    entry_number = Entry(window2, width = 17)
-    entry_number.place(x= 280, y= 120)
+    entry_number = Entry(frame1, width = 16)
+    entry_number.place(x= 260, y= 120)
 
     # label, for sex
-    Label(window2, text = "Sex", font = "verdana 8 bold").place(x= 400, y= 85)
+    Label(frame1, text = "Sex", font = "verdana 8 bold").place(x= 380, y= 85)
     # radiobutton, for sex
     sex = StringVar()
-    Radiobutton(window2, text = "Male", variable = sex, value = "Male").place(x= 400, y= 100)
-    Radiobutton(window2, text = "Female", variable = sex, value = "Female").place(x= 400, y= 120)
+    Radiobutton(frame1, text = "Male", variable = sex, value = "Male").place(x= 385, y= 100)
+    Radiobutton(frame1, text = "Female", variable = sex, value = "Female").place(x= 385, y= 120)
     
     # label, for address
-    Label(window2, text = "Address", font = "verdana 8 bold").place(x= 10, y= 150)
-    entry_address = Entry(window2, width = 77)
+    Label(frame1, text = "Address", font = "verdana 8 bold").place(x= 10, y= 150)
+    entry_address = Entry(frame1, width = 75)
     entry_address.place(x= 10, y= 170)
 
     # label for health details
@@ -177,8 +182,5 @@ label_add_data.place(x=180, y= 210)
 # button, to add information  
 button_add_data = Button(window, text= "Click here", font = "verdana 6", fg= "white", bg= "dark red", command= open_window2)
 button_add_data.place(x= 250, y= 211)
-
-
-
 
 window.mainloop() # Keep the window open
