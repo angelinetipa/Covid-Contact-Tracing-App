@@ -46,7 +46,7 @@ def open_window3(): # function to open window 3
 
 entry_search = Entry(window, width= 30, bd= 3)
 entry_search.place(x= 119, y= 145)
-button_search = Button(window, text= "Search", font = "verdana 8", width = 8, bd = 4, command= open_window3)
+button_search = Button(window, text= "Search", font = "verdana 8 bold", width = 8, bd = 4, command= open_window3)
 button_search.place(x= 307, y= 143)
 
 def open_window2(): # function to open window 2
@@ -172,10 +172,11 @@ def open_window2(): # function to open window 2
     button_submit.place(x=210, y= 600)
         # if submitted, append into file
 
-
+label_add_data = Label(window, text= "Add Data?", font= "verdana 8", fg= "white", bg= "dark red")
+label_add_data.place(x=180, y= 190)
 # button, to add information  
-button_add_data = Button(window, text= "Click here", font = "verdana 6", command= open_window2)
-button_add_data.place(x= 180, y= 230)
+button_add_data = Button(window, text= "Click here", font = "verdana 6", fg= "white", bg= "dark red", command= open_window2)
+button_add_data.place(x= 250, y= 192)
 
 
 
